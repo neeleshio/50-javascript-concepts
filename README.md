@@ -1,4 +1,4 @@
-Clousers<div align="center">
+<div align="center">
   <h1>100 Javascript Concepts</h1>
   
   <p><b>JavaScript</b> is a lightweight, Just-in-time compiled, Synchronous Single threaded, Weekly typed programming language.</p>
@@ -35,7 +35,7 @@ Clousers<div align="center">
 23. [Uses of clousers]()
 24. [SetTimeout]()
 25. [Data hiding using clousers]()
-26. [Disadvantages of clousers]()()
+26. [Disadvantages of clousers]()
 27. [Garbage collectors]()
 28. [Types of functions]()
 29. [Function constructors]()
