@@ -14,6 +14,10 @@
 2. [ECMAScript & ES6](#2-ECMAScript-&-ES6)
 3. [Global Execution Context](#3-Global-Execution-Context)
 4. [2 Phases of code run](#4-2-Phases-of-code-run)
+5. [Call stack](#5-Call-stack)
 
 ### 1. Data types
 ### 2. ECMAScript & ES6
+### 3. Global Execution Context
+### 4. 2 Phases of code run
+### 5. Call stack
