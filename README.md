@@ -10,7 +10,7 @@
 
 ## Let's go :)
 
-1. [Data types](#1.-data-types)
+1. [Data types](#1-data-types)
 2. [var versus let / const](#var-versus-let--const)
 3. [ECMAScript & ES6]()
 4. [Global Execution Context]()
