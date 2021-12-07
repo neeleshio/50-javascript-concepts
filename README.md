@@ -88,10 +88,10 @@
 76. [Destructuring]()
 77. [Deep copy & shallow copy]()
 78. [Array methods & their Big(O)]()
-79. [map() vs forEach()]
-80. [map() vs reduce() vs filter()]
+79. [map() vs forEach()]()
+80. [map() vs reduce() vs filter()]()
 81. [Map vs Objects]()
-82. [Sets & WeakSets]
+82. [Sets & WeakSets]()
 83. [Memoization]()
 84. [Object freeze vs seal vs preventExtension]()
 85. [Numeric Seperator]
@@ -106,7 +106,7 @@
 94. [Service workers]()
 
 
-**[⬆ Back to Top](#let's-go)**
+**[⬆ Back to Top](#let's-go-:)**
 
 
 
