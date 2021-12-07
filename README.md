@@ -109,7 +109,7 @@
 97. [Service workers]()
 
 
-**[⬆ Back to Top](#let's-go-:)**
+**[⬆ Back to Top](#let's-go-)**
 
 
 
