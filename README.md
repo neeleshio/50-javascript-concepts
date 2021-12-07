@@ -127,7 +127,7 @@ const squares = arr.map(x => x * x); // Arrow Function for terser implementation
 when possible.
 <sup>[(back to table of contents)](#table-of-contents)</sup>
 
-## Data types
+## 1. Data types
 
 > Besides `var`, we now have access to two new identifiers for storing values
 —`let` and `const`. Unlike `var`, `let` and `const` statements are not hoisted
