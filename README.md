@@ -67,7 +67,7 @@
 55. [Uses of prototype]()
 56. [Call, Apply, Bind]()
 57. [Promises]()
-58. [Async Await]
+58. [Async/await]()
 59. [Callback hell]()
 60. [Imports & dynamic imports]()
 61. [Polyfills]()
@@ -76,7 +76,7 @@
 64. [Event Bubbling & capturing (trikkling)]()
 65. [Event delegation]()
 66. [Debouncing & Throtling]()
-67. [Objects][]
+67. [Objects]()
 68. [Rest & spread operators]()
 69. [Destructuring]()
 70. [Deep copy & shallow copy]()
