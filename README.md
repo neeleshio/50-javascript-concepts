@@ -10,7 +10,7 @@
 
 ## Let's go :)
 
-1. [Data types](#1.-data-types)
+1. [Data types](#data-types)
 2. [var versus let / const](#var-versus-let--const)
 3. [ECMAScript & ES6]()
 4. [Global Execution Context]()
@@ -127,7 +127,7 @@ const squares = arr.map(x => x * x); // Arrow Function for terser implementation
 when possible.
 <sup>[(back to table of contents)](#table-of-contents)</sup>
 
-## var versus let / const
+## Data types
 
 > Besides `var`, we now have access to two new identifiers for storing values
 —`let` and `const`. Unlike `var`, `let` and `const` statements are not hoisted
