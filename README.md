@@ -17,7 +17,7 @@ Clousers<div align="center">
 5. [Call stack](#5-Call-stack)
 6. [Hoisting]()
 7. [Arrow functions hoisting]()
-8. [Window object]
+8. [Window object]()
 9. ['this' keyword]
 10. ['this' context in arrow functions]
 11. [Global space/scope]
