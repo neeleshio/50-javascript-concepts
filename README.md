@@ -117,9 +117,28 @@
 
 
 
-<!-- 
-### 1. Data types
-### 2. ECMAScript & ES6
+
+## 1. Data types
+JavaScript provides 2 types of data-types, `Primitive` type and `Non-Primitive` type.
+#### Primitive type:
+1. String
+2. Number 
+3. BigInt
+4. Boolean
+5. Null
+6. Undefined
+7. Symbol
+#### Non-Primitive type:
+1. Array
+2. Object
+
+### 2. JavaScript vs ECMAScript vs ES6
+JavaScript is a programming `language` 
+
+ECMAScript is the `specification` for JavaScript.
+
+ES6 is the most `prominent version` of JavaScript, released in the year 2015.
+
 ### 3. Global Execution Context
 ### 4. 2 Phases of code run
-### 5. Call stack -->
+### 5. Call stack
