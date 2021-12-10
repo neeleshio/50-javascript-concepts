@@ -132,7 +132,7 @@ JavaScript provides 2 types of data-types, `Primitive` type and `Non-Primitive` 
 1. Array
 2. Object
 
-### 2. JavaScript vs ECMAScript vs ES6
+## 2. JavaScript vs ECMAScript vs ES6
 `JavaScript` is a programming language.
 
 `ECMAScript` is the specification for JavaScript.
@@ -149,7 +149,8 @@ JavaScript provides 2 types of data-types, `Primitive` type and `Non-Primitive` 
 7. Classes
 8. Promises
 9. Modules
-### 4. typeof
+
+## 4. typeof
 `typeof` operator can be used to find the data type of a value.
 
 ```javascript
@@ -190,4 +191,5 @@ typeof undefined // 'undefined'
 ```javascript
 typeof mycar // 'undefined'
 ```
-### 5. Call stack
+
+## 5. Call stack
