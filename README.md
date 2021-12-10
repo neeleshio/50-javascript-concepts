@@ -12,8 +12,8 @@
 
 1. [Data types](#1-data-types)
 2. [ECMAScript & ES6](#2-ECMAScript-&-ES6)
-3. [Most used es6 features]()
-4. [typeof]()
+3. [Most used es6 features](#3-most-used-es6-features)
+4. [typeof](#4-typeof)
 5. [Global Execution Context](#3-Global-Execution-Context)
 6. [2 Phases of code run](#4-2-Phases-of-code-run)
 7. [Call stack](#5-Call-stack)
@@ -133,12 +133,61 @@ JavaScript provides 2 types of data-types, `Primitive` type and `Non-Primitive` 
 2. Object
 
 ### 2. JavaScript vs ECMAScript vs ES6
-JavaScript is a programming `language` 
+`JavaScript` is a programming language.
 
-ECMAScript is the `specification` for JavaScript.
+`ECMAScript` is the specification for JavaScript.
 
-ES6 is the most `prominent version` of JavaScript, released in the year 2015.
+`ES6` is the most prominent version of JavaScript, released in the year 2015.
 
-### 3. Global Execution Context
-### 4. 2 Phases of code run
+### 3. Most used es6 features.
+1. Let & Const
+2. Template Literals
+3. Arrow Functions
+4. Rest & Spread operators
+5. Default parameters
+6. Destructuring assignment
+7. Classes
+8. Promises
+9. Modules
+### 4. typeof
+`typeof` operator can be used to find the data type of a value.
+
+```javascript
+typeof "superman" // 'string'
+```
+```javascript
+typeof 100 // 'number'
+```
+```javascript
+typeof NaN // 'number'
+```
+```javascript
+typeof true // 'boolean'
+typeof false // 'boolean'
+```
+```javascript
+typeof 1n // 'bigint'
+typeof BigInt(9007199254740991) // 'bigint'
+```
+```javascript
+typeof function(){} // 'function'
+```
+```javascript
+typeof [] // 'object'
+```
+```javascript
+typeof {} // 'object'
+```
+```javascript
+typeof null // 'object'
+```
+```javascript
+typeof new Date() // 'object'
+```
+```javascript
+typeof undefined // 'undefined'
+```
+```javascript
+typeof mycar // 'undefined'
+```
 ### 5. Call stack
