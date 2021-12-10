@@ -200,5 +200,5 @@ typeof mycar // 'undefined'
 
 **[⬆ Back to Top](#lets-go-)**
 
-## 5. Call stack
+## 5. Global Execution Context
 
