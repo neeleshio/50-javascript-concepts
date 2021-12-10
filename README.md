@@ -161,6 +161,7 @@ JavaScript provides 2 types of data-types, `Primitive` type and `Non-Primitive` 
 
 ```javascript
 typeof "superman" // 'string'
+typeof "" // 'string'
 ```
 ```javascript
 typeof 100 // 'number'
