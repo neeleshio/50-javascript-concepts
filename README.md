@@ -132,6 +132,8 @@ JavaScript provides 2 types of data-types, `Primitive` type and `Non-Primitive` 
 1. Array
 2. Object
 
+**[⬆ Back to Top](#lets-go-)**
+
 ## 2. JavaScript vs ECMAScript vs ES6
 `JavaScript` is a programming language.
 
@@ -139,7 +141,9 @@ JavaScript provides 2 types of data-types, `Primitive` type and `Non-Primitive` 
 
 `ES6` is the most prominent version of JavaScript, released in the year 2015.
 
-### 3. Most used es6 features.
+**[⬆ Back to Top](#lets-go-)**
+
+## 3. Most used es6 features.
 1. Let & Const
 2. Template Literals
 3. Arrow Functions
@@ -149,6 +153,8 @@ JavaScript provides 2 types of data-types, `Primitive` type and `Non-Primitive` 
 7. Classes
 8. Promises
 9. Modules
+
+**[⬆ Back to Top](#lets-go-)**
 
 ## 4. typeof
 `typeof` operator can be used to find the data type of a value.
@@ -192,4 +198,7 @@ typeof undefined // 'undefined'
 typeof mycar // 'undefined'
 ```
 
+**[⬆ Back to Top](#lets-go-)**
+
 ## 5. Call stack
+
