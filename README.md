@@ -14,7 +14,7 @@
 2. [ECMAScript & ES6](#2-ECMAScript-&-ES6)
 3. [Most used es6 features](#3-most-used-es6-features)
 4. [typeof](#4-typeof)
-5. [Execution Context & Global Execution Context](#3-Execution Context-Global-Execution-Context)
+5. [Execution Context and Global Execution Context](#3-Execution Context-and-Global-Execution-Context)
 6. [2 Phases of code run](#4-2-Phases-of-code-run)
 7. [Call stack](#5-Call-stack)
 8. [Synchronous Single threaded]()
