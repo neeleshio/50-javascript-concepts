@@ -202,4 +202,6 @@ typeof mycar // 'undefined'
 **[⬆ Back to Top](#lets-go-)**
 
 ## 5. Global Execution Context
+Everything in JavaScript happens inside an `Execution context`. An Execution context is like a container or environment where the JavaScript code evaluated & executed.
 
+A `Global execution context` gets created even before it starts to execute any code, so it'll always present at the bottom of the call stack. All the global code i.e. code which is not inside any function or object is executed inside the `Global execution context`. Inside the `Global execution contex`, a new `Execution context` gets created on every time it finds a function to execute.
