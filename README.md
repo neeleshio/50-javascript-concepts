@@ -14,7 +14,7 @@
 2. [ECMAScript & ES6](#2-ECMAScript-&-ES6)
 3. [Most used es6 features](#3-most-used-es6-features)
 4. [typeof](#4-typeof)
-5. [Global Execution Context](#3-Global-Execution-Context)
+5. [Execution Context & Global Execution Context](#3-Execution Context-Global-Execution-Context)
 6. [2 Phases of code run](#4-2-Phases-of-code-run)
 7. [Call stack](#5-Call-stack)
 8. [Synchronous Single threaded]()
@@ -201,7 +201,16 @@ typeof mycar // 'undefined'
 
 **[⬆ Back to Top](#lets-go-)**
 
-## 5. Global Execution Context
+## 5. Execution Context & Global Execution Context
 Everything in JavaScript happens inside an `Execution context`. An Execution context is like a container or environment where the JavaScript code evaluated & executed.
 
-A `Global execution context` gets created even before it starts to execute any code, so it'll always present at the bottom of the call stack. All the global code i.e. code which is not inside any function or object is executed inside the `Global execution context`. Inside the `Global execution contex`, a new `Execution context` gets created on every time it finds a function to execute.
+A `Global execution context` gets created even before it starts to execute any code, so it'll always present at the bottom of the call stack. All the global code i.e. code which is not inside any function or object is executed inside the `Global execution context`. Inside the `Global execution contex`, a new `Execution context` gets created on every time a new function is invoked.
+
+`Execution context` is composed of 2 components,
+
+#### 1. Memory component
+This is the place where all the variables and functions are stored as a key-value pairs.
+
+#### 2. Code component
+This is where the code gets executed one line at a time.
+
