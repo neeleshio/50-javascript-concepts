@@ -16,11 +16,11 @@
 4. [typeof](#4-typeof)
 5. [Execution Context and Global Execution Context](#5-Execution-Context-and-Global-Execution-Context)
 6. [2 Phases of code run](#4-2-Phases-of-code-run)
-7. [Call stack](#5-Call-stack)
-8. [Synchronous Single threaded]()
-9. [Hoisting]()
-10. [Arrow functions]()
-11. [Arrow functions hoisting]()
+7. [Call stack](#7-Call-stack)
+8. [Synchronous Single threaded](#8-Synchronous-Single-threaded)
+9. [Hoisting](#9-hoisting)
+10. [Arrow functions](#10-arrow-functions)
+11. [Arrow functions hoisting](#11-Arrow-functions-hoisting)
 12. [Window object]()
 13. ['this' keyword]()
 14. ['this' context in arrow functions]()
@@ -143,7 +143,7 @@ JavaScript provides 2 types of data-types, `Primitive` type and `Non-Primitive` 
 
 **[⬆ Back to Top](#lets-go-)**
 
-## 3. Most used es6 features.
+## 3. Most used ES6 features.
 1. Let & Const
 2. Template Literals
 3. Arrow Functions
@@ -214,3 +214,39 @@ This is the place where all the variables and functions are stored as a key-valu
 #### 2. Code component
 This is where the code gets executed one line at a time.
 
+## 7. Call stack
+A `Call stack` is a data structure where data can be pushed & popped and follows the `LIFO`( Last in First out ) principle.
+
+In JavaScript, the `JavaScript Engine` has its own `Call stack` which keeps track of functions to be executed. So whenever a function is invoked, it is pushed into the `Call stack`.
+
+## 8. Synchronous Single threaded
+JavaScript is a `Synchronous Single threaded` language. So when we say `Single threaded` that means it can only execute one command at a time.
+
+So when we say `Synchronous Single threaded` that means it can move to the next command only after it finishes executing the current line/command.
+
+## 9. Hoisting
+`Hoisting` is a phenomenon in JS by which we can access variables & functions even before their declaration.
+
+```javascript
+console.log(x) // undefined
+console.log(foo) // hello from foo
+
+var x = "hello"
+
+function foo() {
+  console.log("hello from foo")
+}
+```
+
+## 10. Arrow functions
+`Arrow functions` are an alternative to traditional functions, introduced in `ES6`. Arrow functions are always `Anonymous functions`, so to call them we need to assign it to a variable.
+
+```javascript
+const square = a => a * a;
+
+console.log(square(2)) // 4
+```
+
+using `Arrow functions`, curly braces, parenthesis, function keyword & return keywords become optional.
+
+## 11. Arrow functions hoisting
