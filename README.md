@@ -324,9 +324,9 @@ function foo () {   --> global scoped function
 **[⬆ Back to Top](#lets-go-)**
 
 ## 16. undefined vs not defined vs null
-`undefined` keyword or property indicates that a variable has not been assigned/initialized a value. `undefined` variables takes up their own memory.
+`undefined` keyword or property indicates that a variable has not been assigned/initialized a value. `undefined` variables takes up their own memory in the memory space.
 
-`not defined` property indicates that a variable not at all present in the code and in the memory space.
+`not defined` property indicates that a variable is not at all present in the code and in the memory space.
 
 `null` is an object in JavaScript. `null` means nothing & is used to represent an intentional absence of value.
 
