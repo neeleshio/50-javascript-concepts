@@ -21,10 +21,10 @@
 9. [Hoisting](#9-hoisting)
 10. [Arrow functions](#10-arrow-functions)
 11. [Arrow functions hoisting](#11-Arrow-functions-hoisting)
-12. [Window object]()
-13. ['this' keyword]()
-14. ['this' context in arrow functions]()
-15. [Global space/scope]()
+12. [Window object](#12-window-object)
+13. [Global space/scope]()
+14. ['this' keyword]()
+15. ['this' context in arrow functions]()
 16. [undefined vs not defined vs null]()
 17. [Scope chain]()
 18. [Lexical scope/environment]()
@@ -234,11 +234,13 @@ So when we say `Synchronous Single threaded` that means it can move to the next 
 **[⬆ Back to Top](#lets-go-)**
 
 ## 9. Hoisting
-`Hoisting` is a phenomenon in JS by which we can access variables & functions even before their declaration.
+ In plain english `Hoist` means raise or lift. In Javascript `Hoisting` is the default behaviour of moving all the declarations to the top of their scope before code execution. So if we try to access any variables or functions before their declaration, JS won't throw any error. 
+
+In other words, we can also say that `Hoisting` is a phenomenon in JS by which we can access variables & functions even before their declaration.
 
 ```javascript
 console.log(x) // undefined
-console.log(foo) // hello from foo
+console.log(foo()) // hello from foo
 
 var x = "hello"
 
@@ -265,3 +267,56 @@ using `Arrow functions`, curly braces, parenthesis, function keyword & return ke
 **[⬆ Back to Top](#lets-go-)**
 
 ## 11. Arrow functions hoisting
+Like traditional functions, `arrow functions` are not `hoisted` so we can't call them before their declaration.
+
+```javascript
+foo() // Uncaught TypeError: foooo is not a function
+
+bar() // Uncaught ReferenceError: fooo is not defined
+
+var foo = () => {
+  console.log("hello from foo")
+}
+
+const bar = () => {
+  console.log("hello from bar")
+}
+```
+Because it behaves just like another variable. It doesn't behave like a function.
+
+## 12. Window object
+`Window` is the global object present in the browsers. Every time we run a JS program, the JS engine creates the `window` object.
+
+It consists of lot of useful methods & properties and all the global space variables & functions gets attached to the window object so we can access them anywhere in our program.
+
+```javascript
+var a = 10
+var b = 20
+
+console.log(window.a) // 10
+console.log(window.b) // 20
+```
+
+At global level `this` points to `window` object.
+
+```javascript
+this === window // true
+```
+
+## 13. Global space/scope
+Anything we write inside JS which is not inside the function or block.
+
+```javascript
+var x = 10   --> global scoped varibale
+
+function foo () {   --> global scoped function
+  var y = 20        --> not global scoped
+}
+```
+
+## 16. undefined vs not defined vs null
+`undefined` keyword or property indicates that a variable has not been assigned/initialized a value. `undefined` variables takes up their own memory.
+
+`not defined` property indicates that a variable not at all present in the code and in the memory space.
+
+`null` is an object in JavaScript. `null` means nothing & is used to represent an intentional absence of value.
