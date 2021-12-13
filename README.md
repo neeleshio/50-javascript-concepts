@@ -214,15 +214,24 @@ This is the place where all the variables and functions are stored as a key-valu
 #### 2. Code component
 This is where the code gets executed one line at a time.
 
+
+**[⬆ Back to Top](#lets-go-)**
+
 ## 7. Call stack
 A `Call stack` is a data structure where data can be pushed & popped and follows the `LIFO`( Last in First out ) principle.
 
 In JavaScript, the `JavaScript Engine` has its own `Call stack` which keeps track of functions to be executed. So whenever a function is invoked, it is pushed into the `Call stack`.
 
+
+**[⬆ Back to Top](#lets-go-)**
+
 ## 8. Synchronous Single threaded
 JavaScript is a `Synchronous Single threaded` language. So when we say `Single threaded` that means it can only execute one command at a time.
 
 So when we say `Synchronous Single threaded` that means it can move to the next command only after it finishes executing the current line/command.
+
+
+**[⬆ Back to Top](#lets-go-)**
 
 ## 9. Hoisting
 `Hoisting` is a phenomenon in JS by which we can access variables & functions even before their declaration.
@@ -238,6 +247,9 @@ function foo() {
 }
 ```
 
+
+**[⬆ Back to Top](#lets-go-)**
+
 ## 10. Arrow functions
 `Arrow functions` are an alternative to traditional functions, introduced in `ES6`. Arrow functions are always `Anonymous functions`, so to call them we need to assign it to a variable.
 
@@ -248,5 +260,8 @@ console.log(square(2)) // 4
 ```
 
 using `Arrow functions`, curly braces, parenthesis, function keyword & return keywords become optional.
+
+
+**[⬆ Back to Top](#lets-go-)**
 
 ## 11. Arrow functions hoisting
