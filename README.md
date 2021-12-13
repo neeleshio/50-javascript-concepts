@@ -284,6 +284,9 @@ const bar = () => {
 ```
 Because it behaves just like another variable. It doesn't behave like a function.
 
+
+**[⬆ Back to Top](#lets-go-)**
+
 ## 12. Window object
 `Window` is the global object present in the browsers. Every time we run a JS program, the JS engine creates the `window` object.
 
@@ -303,6 +306,9 @@ At global level `this` points to `window` object.
 this === window // true
 ```
 
+
+**[⬆ Back to Top](#lets-go-)**
+
 ## 13. Global space/scope
 Anything we write inside JS which is not inside the function or block.
 
@@ -314,9 +320,17 @@ function foo () {   --> global scoped function
 }
 ```
 
+
+**[⬆ Back to Top](#lets-go-)**
+
 ## 16. undefined vs not defined vs null
 `undefined` keyword or property indicates that a variable has not been assigned/initialized a value. `undefined` variables takes up their own memory.
 
 `not defined` property indicates that a variable not at all present in the code and in the memory space.
 
 `null` is an object in JavaScript. `null` means nothing & is used to represent an intentional absence of value.
+
+
+**[⬆ Back to Top](#lets-go-)**
+
+## 
