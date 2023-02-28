@@ -460,3 +460,283 @@ Note: I tried the above code in different places like,
 |    reasigned.                                     |    const cannot be reasigned or redeclared.       |
 | 3. It can be accessed without initialization as   | 3. It cannot be accessed without initialization   | 
 |    its default value is “undefined”.              |    otherwise it will give ‘referenceError’.       |
+
+## 24. Const with Objects
+`Const` allows us to change the Object properties.
+
+```javascript
+const obj = { name: 'Bob' }
+obj.name = 'silly'
+
+console.log(obj) // { name: 'silly' }
+``` 
+So, `const` only prevent reassigning of primitive data types.
+
+## 25. Temporal dead zone
+The time/period b/w `let` or `const` variable is hoisted & till it initialised some value.
+
+So until it gets some values, the `let` and `const` will be in temporal dead zone. 
+
+## 26. Reference vs Syntax vs Type errors
+#### 1. Reference error:
+When there is no variable found in the memory.
+
+#### 2. Syntax error:
+When there are mistakes in the source code, such as spelling and punctuation errors, incorrect labels, and so on.
+
+#### 3. Type error:
+when a value is not of the expected type.
+
+Ex: if a string is attempted to be multiplied with an integer, a `TypeError` is generated.
+
+## 27. Declaration vs Initialisation
+`Declaration` declares the creation of variables and functions. or just naming the variable.
+
+`Initialization` occurs when you assign an initial value to a variable.
+
+## 28. Arguments vs Parameters
+`Arguments` are the values that are paased to the function during the function call.
+
+`Parameters` are the variables that are used to recieve the arguments that are passed to the function.
+
+```javascript
+function printName (name, city) {.  ---- Parameters
+  return `Iam {name} from {city}`;
+}
+
+printName('Neelesh', 'Ckm') ---- Arguments
+```
+
+## 29. Default parameters
+`Default parameters` allow named parameters to be initialized with default values if no value or undefined is passed.
+
+```javascript
+function multiply(a, b = 1) {  --- 'b' has been initialized with a default value 1. 
+  return a * b;
+}
+
+console.log(multiply(5, 2));
+// Expected output: 10
+
+console.log(multiply(5));
+// Expected output: 5
+```
+
+## 30. Pass by value vs Pass by reference
+<--- loading --->
+
+## 31. Block scope
+We use `block` to combine multiple statements.
+
+```javascript
+{
+        ---- this is a Block.
+}
+```
+
+Ex: if else statements, for loops etc.
+
+## 32. Shadowing
+`shadowing` occurs when a variable declared in a certain scope (e.g. a local variable) has the same name as a variable in an outer scope (e.g. a global variable). When this happens, the outer variable is said to be shadowed by the inner variable.
+
+#### Ex.1: 
+```javascript
+var a = 100;
+
+{
+  var a = 20;
+}
+
+console.log(a) // 20
+```
+First it assigns 100 to `a` & then when it comes at block scoped `a`, it again assigns 20 to the same `a` in the memory. So, value of `a` is 20.
+
+#### Ex.2:
+```javascript
+let b = 100;
+
+{
+  let b = 20;
+}
+
+console.log(a) // 100
+```
+Becoz, `let` is block scoped & shadowing won't happen. Same foe `const`.
+
+Note: It actually creates 2 `b` variables, one in `Global` & another in `Block`.
+
+#### Ex.3:
+```javascript
+let c = 10;
+
+{
+  var c = 20;     ---- illigal shadowing. 
+}
+
+console.log(a) // SyntaxError: Identifier 'a' has already been declared
+```
+#### Ex.4:
+```javascript
+var a = 100
+
+{
+    let a = 20    ---- legal
+}
+
+console.log(a) // 100
+```
+
+## 33. Clousers
+`Closure` is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). 
+or,
+Closure gives you access to an outer function's scope from an inner function.
+or,
+Function along with its lexical scope forms a `closure`.
+
+```javascript
+function outer () {
+  const a = 7;
+  
+  function inner () {
+    console.log(a)
+  }
+  
+  return inner;
+}
+
+const z = outer();
+.
+...million lines of code
+.
+z() // 7
+```
+
+So, even if we execute the returned function outside its scope, it still remembers its variables with the help of `clousers`.
+
+```javascript
+function x() {
+  let a = 900;
+  
+  function y() {
+    let b = 7;
+    
+    function z() {
+      console.log(a, b)              Closure:(z)
+    }                                   b: 900
+    return z;                        Closure:(y)
+  }                                     a: 7
+  return y;
+}
+
+ const a = x()    or just x()()() // 900, 7      
+ const b = a()   
+ b() // 900, 7
+```
+
+Note: Clousers remembers the reference to the variables & not the actual value.
+
+## 34. Uses of Clousers
+1. Module design pattern
+2. Currying
+3. Functions like once
+4. memoize
+5. Maintaining state in async world
+6. SetTimeouts
+7. Iterators etc.
+
+## 35. Disadvantages of Clousers
+1. Overconsumption of memory becoz variables are not `garbage collected`.
+2. If not handled properly then `memory leak` could happen. 
+
+## 36. SetTimeout
+JavaScript doesn't wait for none.
+
+```javascript
+function x() {
+  const a = 1;
+  
+  setTimeout(() => {
+    console.log(a)
+  }, [3000])
+  
+  console.log('hi')
+}
+
+x()
+
+//'hi'
+// 1
+```
+
+## 37. Data hiding using Clousers
+Consider this counter function,
+```javascript
+let count = 0
+
+function counter() {
+    counter++
+}
+
+counter1()
+```
+But if we want to prevent any function accessing the `count` variable, we wrap this with another function like below.
+
+```javascript
+function counter() {
+    let count = 0
+    
+    return function increment() {
+        count++
+        return count
+    }
+}
+
+const counter1 = counter();
+counter1()  // 1
+counter1()  // 2  
+counter1()  // 3  
+```
+By this method, the variables are safe & also we can create any number of counter instances like counter2 = counter(), this will be a new counter which starts from 0.
+
+## 38. Garbage collectors
+If there is any unused variablein the memory, those are `garbage collected`.
+
+## 39. Types of functions
+#### 1. Function statement:
+A named function is a `Function statement`
+
+```javascript
+function a() {
+  //.....
+}
+```
+
+#### 2. Function expression
+This is same as function statement but we can omit the function name.
+
+```javascript
+const a = function () {
+  //....
+}
+```
+
+#### 3. Anonymous function
+Function statement which doesn't have a name or identity.
+
+```javascript
+function () {
+  //....
+}
+```
+
+Note: you can't call these type of functions & it gives SynaxError.
+
+#### 4. Named function expression
+```javascript
+const a = function xyz() {
+  console.log('hi')
+}
+a() // hi
+xyz() // ReferenceError: xyz is not defined.
+```
+So, we can't access xyz outside of that function, becoz it is created as a local scope. Try console logging xyz inside the xyz function itseld & it will outside whole xyz function.  
