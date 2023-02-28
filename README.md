@@ -358,5 +358,105 @@ function printHello() {
 printHello()  // "hello"
 ```
 #### 2. Local or Function scope
-#### 3. Block scope
+When a variable is declared inside a function, it is only accessible within that function and cannot be used outside that function
 
+`var` is a function scoped, becoz:
+
+```javascript
+function hello() {
+  if (true) {
+    var a = 1;  --- function scoped
+    let b = 2;  --- block scoped
+    const c = 3; -- block scoped
+
+    console.log(a);
+    console.log(b);
+    console.log(c);
+  }
+
+  console.log(a);
+  console.log(b);
+  console.log(c);
+}
+
+hello();
+
+output: 
+1
+2
+3
+1
+Reference error: b is not defined.
+```
+So we can access `var` throughout the function.
+
+#### 3. Block scope
+A variable when declared inside the if or switch conditions or inside for or while loops, are accessible within that particular condition or loop.
+
+As you can see in the above `hello` example, we cannot accesss `b` or `c` outside its if block.
+
+## 19. Lexical scope/environment
+Lexical scoping is the environment that holds the variables of the current scope as well as the outer scope.
+or
+Lexical Environment is the local memory along with the lexical environment of its parent.
+or
+Lexical scoping is a type of object oriented programming according to which, a child can access parent scope and global scope
+
+## 20. Scope chain
+It is the process in which, JavaScript engine searches for the value of the variables in the scope of the functions. However, the search is in a lexical manner.
+
+First of all the engine looks out in the current scope of the current function. If not found, it finds it in the parent funtion. If not there, global scope is the last place it checks in.
+Hence, to find value of the required variabe, a chain is formed by looking in the different scopes.
+
+```javascript
+const a = "Hello world"; -- global scope variable
+
+function first() {
+    const b = "I am Neelesh."; -- parent scope variable
+    second();
+
+    function second() {
+        const c = "A frontend developer"; -- current/local scope variable
+        console.log(a + b + c);
+    }
+}
+first();
+// Hello world I am Neelesh. A frontend developer
+```
+## 21. Lexical 'this'
+<--- loading --->
+
+## 22. Let & Const
+1. Both are introduced in ES6.
+2. Variables defined with `let` can be Reassigned.
+3. Variables defined with `const` cannot be Reassigned.
+
+### Hoisting
+let & const are also hoisted, but very deferently than `var` declaration.
+
+```javascript
+console.log(b)  //undefined
+console.log(a)  //Reference error: a is not defined
+
+let a = 10
+var b = 100
+```
+
+Here, `b` gets its memory allocated in the global scope becoz of `var`.
+But, `a` gets its memory allocated in the seperate memory space called `Script`. So we can't access let & const before it gets its value.
+
+Note: I tried the above code in different places like,
+1. codesandbox.io => output is: // undefined.
+2. nodejs => output is: // ReferenceError: Cannot access 'a' before initialization.
+3. browser console => output is: // ReferenceError: 'a' is not defined.
+4. browser console with index.js => output is: // ReferenceError: Cannot access 'a' before initialization.
+
+## 23. Var vs Let vs Const
+
+|                       var                         |                     let & const                   |
+|---------------------------------------------------|---------------------------------------------------|
+| 1. var is a function scoped.                      | 1. let & const are block scoped.                  |
+| 2. Variables defined with var can be redeclared & | 2. let can be reasigned but cannot be redeclared. |
+|    reasigned.                                     |    const cannot be reasigned or redeclared.       |
+| 3. It can be accessed without initialization as   | 3. It cannot be accessed without initialization   | 
+|    its default value is “undefined”.              |    otherwise it will give ‘referenceError’.       |
