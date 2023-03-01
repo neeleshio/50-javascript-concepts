@@ -343,7 +343,7 @@ In JS, we can create `scope` using code blocks, functions & modules.
 ## 18. Types of scope
 There are 3 types of scope in JS:
 
-  #### 1. Global scope
+  #### i. Global scope
 Any variable that is not inside any function or block, is inside the global scope & they are called global scoped variables.
 
 The variables in `global scope` can be accessed from anywhere in the program.
@@ -357,7 +357,7 @@ function printHello() {
 
 printHello()  // "hello"
 ```
-  #### 2. Local or Function scope
+  #### ii. Local or Function scope
 When a variable is declared inside a function, it is only accessible within that function and cannot be used outside that function
 
 `var` is a function scoped, becoz:
