@@ -308,7 +308,6 @@ At global level `this` points to `window` object.
 this === window // true
 ```
 
-
 **[⬆ Back to Top](#lets-go-)**
 
 ## 13. Global space/scope
@@ -321,7 +320,6 @@ function foo () {   --> global scoped function
   var y = 20        --> not global scoped
 }
 ```
-
 
 **[⬆ Back to Top](#lets-go-)**
 
@@ -340,10 +338,13 @@ function foo () {   --> global scoped function
 
 In JS, we can create `scope` using code blocks, functions & modules.
 
+
+**[⬆ Back to Top](#lets-go-)**
+
 ## 18. Types of scope
 There are 3 types of scope in JS:
 
-  #### i. Global scope
+  #### 1. Global scope
 Any variable that is not inside any function or block, is inside the global scope & they are called global scoped variables.
 
 The variables in `global scope` can be accessed from anywhere in the program.
@@ -357,7 +358,7 @@ function printHello() {
 
 printHello()  // "hello"
 ```
-  #### ii. Local or Function scope
+  #### 2. Function scope
 When a variable is declared inside a function, it is only accessible within that function and cannot be used outside that function
 
 `var` is a function scoped, becoz:
@@ -395,17 +396,23 @@ A variable when declared inside the if or switch conditions or inside for or whi
 
 As you can see in the above `hello` example, we cannot accesss `b` or `c` outside its if block.
 
+
+**[⬆ Back to Top](#lets-go-)**
+
 ## 19. Lexical scope/environment
-Lexical scoping is the environment that holds the variables of the current scope as well as the outer scope.
-or
-Lexical Environment is the local memory along with the lexical environment of its parent.
-or
-Lexical scoping is a type of object oriented programming according to which, a child can access parent scope and global scope
+Lexical scoping is the environment that holds the variables of the current scope as well as the outer scope.\
+or,\
+Lexical Environment is the local memory along with the lexical environment of its parent.\
+or,\
+Lexical scoping is a type of object oriented programming according to which, a child can access parent scope and global scope.
+
+
+**[⬆ Back to Top](#lets-go-)**
 
 ## 20. Scope chain
 It is the process in which, JavaScript engine searches for the value of the variables in the scope of the functions. However, the search is in a lexical manner.
 
-First of all the engine looks out in the current scope of the current function. If not found, it finds it in the parent funtion. If not there, global scope is the last place it checks in.
+First of all the engine looks out in the current scope of the current function. If not found, it finds it in the parent funtion. If not there, global scope is the last place it checks in.\
 Hence, to find value of the required variabe, a chain is formed by looking in the different scopes.
 
 ```javascript
@@ -423,8 +430,15 @@ function first() {
 first();
 // Hello world I am Neelesh. A frontend developer
 ```
+
+
+**[⬆ Back to Top](#lets-go-)**
+
 ## 21. Lexical 'this'
 <--- loading --->
+
+
+**[⬆ Back to Top](#lets-go-)**
 
 ## 22. Let & Const
 1. Both are introduced in ES6.
@@ -451,6 +465,9 @@ Note: I tried the above code in different places like,
 3. browser console => output is: // ReferenceError: 'a' is not defined.
 4. browser console with index.js => output is: // ReferenceError: Cannot access 'a' before initialization.
 
+
+**[⬆ Back to Top](#lets-go-)**
+
 ## 23. Var vs Let vs Const
 
 |                       var                         |                     let & const                   |
@@ -460,6 +477,9 @@ Note: I tried the above code in different places like,
 |    reasigned.                                     |    const cannot be reasigned or redeclared.       |
 | 3. It can be accessed without initialization as   | 3. It cannot be accessed without initialization   | 
 |    its default value is “undefined”.              |    otherwise it will give ‘referenceError’.       |
+
+
+**[⬆ Back to Top](#lets-go-)**
 
 ## 24. Const with Objects
 `Const` allows us to change the Object properties.
@@ -472,10 +492,16 @@ console.log(obj) // { name: 'silly' }
 ``` 
 So, `const` only prevent reassigning of primitive data types.
 
+
+**[⬆ Back to Top](#lets-go-)**
+
 ## 25. Temporal dead zone
 The time/period b/w `let` or `const` variable is hoisted & till it initialised some value.
 
 So until it gets some values, the `let` and `const` will be in temporal dead zone. 
+
+
+**[⬆ Back to Top](#lets-go-)**
 
 ## 26. Reference vs Syntax vs Type errors
 #### 1. Reference error:
@@ -489,10 +515,16 @@ when a value is not of the expected type.
 
 Ex: if a string is attempted to be multiplied with an integer, a `TypeError` is generated.
 
+
+**[⬆ Back to Top](#lets-go-)**
+
 ## 27. Declaration vs Initialisation
 `Declaration` declares the creation of variables and functions. or just naming the variable.
 
 `Initialization` occurs when you assign an initial value to a variable.
+
+
+**[⬆ Back to Top](#lets-go-)**
 
 ## 28. Arguments vs Parameters
 `Arguments` are the values that are paased to the function during the function call.
@@ -506,6 +538,9 @@ function printName (name, city) {.  ---- Parameters
 
 printName('Neelesh', 'Ckm') ---- Arguments
 ```
+
+
+**[⬆ Back to Top](#lets-go-)**
 
 ## 29. Default parameters
 `Default parameters` allow named parameters to be initialized with default values if no value or undefined is passed.
@@ -522,8 +557,14 @@ console.log(multiply(5));
 // Expected output: 5
 ```
 
+
+**[⬆ Back to Top](#lets-go-)**
+
 ## 30. Pass by value vs Pass by reference
 <--- loading --->
+
+
+**[⬆ Back to Top](#lets-go-)**
 
 ## 31. Block scope
 We use `block` to combine multiple statements.
@@ -535,6 +576,9 @@ We use `block` to combine multiple statements.
 ```
 
 Ex: if else statements, for loops etc.
+
+
+**[⬆ Back to Top](#lets-go-)**
 
 ## 32. Shadowing
 `shadowing` occurs when a variable declared in a certain scope (e.g. a local variable) has the same name as a variable in an outer scope (e.g. a global variable). When this happens, the outer variable is said to be shadowed by the inner variable.
@@ -586,11 +630,14 @@ var a = 100
 console.log(a) // 100
 ```
 
+
+**[⬆ Back to Top](#lets-go-)**
+
 ## 33. Clousers
-`Closure` is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). 
-or,
-Closure gives you access to an outer function's scope from an inner function.
-or,
+`Closure` is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment).\
+or,\
+Closure gives you access to an outer function's scope from an inner function.\
+or,\
 Function along with its lexical scope forms a `closure`.
 
 ```javascript
@@ -635,6 +682,9 @@ function x() {
 
 Note: Clousers remembers the reference to the variables & not the actual value.
 
+
+**[⬆ Back to Top](#lets-go-)**
+
 ## 34. Uses of Clousers
 1. Module design pattern
 2. Currying
@@ -644,9 +694,15 @@ Note: Clousers remembers the reference to the variables & not the actual value.
 6. SetTimeouts
 7. Iterators etc.
 
+
+**[⬆ Back to Top](#lets-go-)**
+
 ## 35. Disadvantages of Clousers
 1. Overconsumption of memory becoz variables are not `garbage collected`.
 2. If not handled properly then `memory leak` could happen. 
+
+
+**[⬆ Back to Top](#lets-go-)**
 
 ## 36. SetTimeout
 JavaScript doesn't wait for none.
@@ -667,6 +723,9 @@ x()
 //'hi'
 // 1
 ```
+
+
+**[⬆ Back to Top](#lets-go-)**
 
 ## 37. Data hiding using Clousers
 Consider this counter function,
@@ -698,8 +757,14 @@ counter1()  // 3
 ```
 By this method, the variables are safe & also we can create any number of counter instances like counter2 = counter(), this will be a new counter which starts from 0.
 
+
+**[⬆ Back to Top](#lets-go-)**
+
 ## 38. Garbage collectors
 If there is any unused variablein the memory, those are `garbage collected`.
+
+
+**[⬆ Back to Top](#lets-go-)**
 
 ## 39. Types of functions
 #### 1. Function statement:
