@@ -23,7 +23,7 @@
 11. [Arrow functions hoisting](#11-Arrow-functions-hoisting)
 12. [Window object](#12-window-object)
 13. [Global scope](#13-Global-scope)
-14. ['this' keyword]()
+14. ['this' keyword](#14-'this'-keyword)
 15. ['this' context in arrow functions]()
 16. [Undefined vs not defined vs null]()
 17. [Scope]()
