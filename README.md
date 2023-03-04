@@ -25,7 +25,7 @@
 13. [Global scope](#13-Global-scope)
 14. ['this' keyword]()
 15. ['this' context in arrow functions]()
-16. [undefined vs not defined vs null]()
+16. [Undefined vs not defined vs null]()
 17. [Scope]()
 18. [Types of scope]()
 19. [Lexical scope/environment]()
@@ -323,7 +323,40 @@ function foo () {   --> global scoped function
 
 **[⬆ Back to Top](#lets-go-)**
 
-## 16. undefined vs not defined vs null
+## 14. 'this' keyword
+
+'this' keyword refers to the current **object**
+
+The 'this' keyword refers to different objects depending on how it is used:
+
+#### 1. In Method:
+In an object method, 'this' refers to the object.
+
+```javascript
+const person = {
+  fname: 'neelesh',
+  lname: 'shetty',
+  fullName: function() {
+      return this.fname + ' ' + this.lname;  ----> 'this' refers to 'person' object itself.
+   }
+}
+
+person.fullName() // neelesh shetty
+```
+
+#### 2. 'this' alone:
+```javascript
+let x = this.
+console.log(x) // Window {window: Window, self: Window, document: document, name: 'iframeResult', location: Location, …} 
+```
+
+when used alone, this refers to `global object`. Becoz 'this' is in global scope.
+
+In a browser window the global object is **[object Window]**.
+
+**[⬆ Back to Top](#lets-go-)**
+
+## 16. Undefined vs not defined vs null
 `undefined` keyword or property indicates that a variable has not been assigned/initialized a value. `undefined` variables takes up their own memory in the memory space.
 
 `not defined` property indicates that a variable is not at all present in the code and in the memory space.
