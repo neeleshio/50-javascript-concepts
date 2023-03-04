@@ -25,7 +25,7 @@
 13. [Global scope](#13-Global-scope)
 14. ['this' keyword](#14-this-keyword)
 15. ['this' context in arrow functions](#15-this-context-in-arrow-functions)
-16. [Undefined vs not defined vs null](#16-Undefined-vs-not-vs-defined-vs-null)
+16. [Undefined vs not defined vs null](#16-Undefined-vs-not-defined-vs-null)
 17. [Scope](#17-Scope)
 18. [Types of scope](#18-Types-of-scope)
 19. [Lexical scope/environment]()
