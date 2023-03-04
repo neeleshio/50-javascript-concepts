@@ -719,7 +719,6 @@ function x() {
 }
 
 x()
-
 //'hi'
 // 1
 ```
@@ -761,7 +760,7 @@ By this method, the variables are safe & also we can create any number of counte
 **[⬆ Back to Top](#lets-go-)**
 
 ## 38. Garbage collectors
-If there is any unused variablein the memory, those are `garbage collected`.
+If there is any unused variable in the memory, those are `garbage collected`.
 
 
 **[⬆ Back to Top](#lets-go-)**
