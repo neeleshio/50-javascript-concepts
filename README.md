@@ -51,7 +51,7 @@
 39. [Types of functions]()
 40. [Function statement vs Function expression]()
 41. [Named Function expression]()
-42. [Function constructors]()
+42. [Function constructors](#42-Function-constructors)
 43. [Module design pattern & IIFE]()
 44. [First class functions/citizens]()
 45. [Pure functions]()
@@ -944,3 +944,38 @@ a() // hi
 xyz() // ReferenceError: xyz is not defined.
 ```
 So, we can't access xyz outside of that function, becoz it is created as a local scope. Try console logging xyz inside the xyz function itseld & it will outside whole xyz function.  
+
+**[⬆ Back to Top](#lets-go-)**
+
+## 40. Function statement vs Function expression
+Major difference is `Hoisting`.
+
+```javascript
+a() // 'statement'           ---> a: fn{..}
+b() // b is not a function ---> b: undefined
+
+function a() {
+  console.log('statement')
+}
+
+const b = function() {
+  console.log('expression')
+}
+```
+So, function statements are hoisted as a variables.
+
+## 42. Function constructors
+<--loading-->
+
+## 43. Module design pattern & IIFE
+The module pattern is a design pattern used for improving the maintainability and reusability of the code by creating `public` and `private` access levels.
+
+Sometimes called `encapsulation`, it protects the value inside a module from being accessed from other scopes.
+
+## 44. First class functions or citizens
+The ability to be use functions as values.
+
+## 45. Pure functions
+<--loading-->
+
+## 46. Recurssion
