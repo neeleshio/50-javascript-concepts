@@ -325,7 +325,9 @@ function foo () {   --> global scoped function
 
 ## 14. this keyword
 
-'this' keyword refers to the current **object**
+1. 'this' keyword refers to the current **object**
+2. 'this' keyword always or mostly used in object oriented programming.
+3. If we get rid of 'this', we will be left with Javscript as a functional programming language.
 
 The 'this' keyword refers to different objects depending on how it is used:
 
@@ -354,7 +356,112 @@ when used alone, this refers to `global object`. Becoz 'this' is in global scope
 
 In a browser window the global object is **[object Window]**.
 
+**In strict mode:**
+```javascript
+'use strict'
+let y = this.
+console.log(y) // Window {window: Window, self: Window, document: document, name: 'iframeResult', location: Location, …} 
+```
+
+#### 3. In a function:
+In a function, it refers to `global object`.
+
+```javascript
+function hello() {
+  console.log(this)
+}
+
+hello() // Window {window: Window, self: Window, document: document, name: 'iframeResult', location: Location, …} 
+```
+
+**In strict mode:**
+```javascript
+'use strict'
+function hey() {
+  console.log(this)
+}
+
+hey() // undefined
+```
+
+#### 4. Event handler:
+When a function is used as an event handler, its 'this' is set to the element on which the listener is placed.
+
+```javascript
+<button onclick="this.style.display='none'">Click to remove button</button>
+```
+
+so when we click the button, the above style will get added.
+
+
 **[⬆ Back to Top](#lets-go-)**
+
+## 15. Arrow function:
+An arrow function expression is a compact alternative to a traditional function expression.
+
+### Characteristics:
+  1. Using the arrow function, curly braces, paranthesis, function & return keywords become optional.
+  2. Arrow functions are always Anonymous functions, so to call arrow function we need to assign it to a variable.
+  3. Arrow function expressions should only be used for non-method functions because they do not have their own `this`.
+     ```javascript
+     const obj = {
+        fname: 'neel',
+        lname: 'shett',
+        getName: () => console.log(this.fname, this) ---> 'this' points to the global window object. 
+     }
+     
+     obj.getName() // undefined, Window {window: Window, self: Window, document: document, name: 'iframeResult', location: Location, …} 
+     ```
+  4. Arrow functions do not have arguments binding unlike regular functions.
+     ```javascript
+     const x = () => {
+        console.log(arguments);
+     }
+
+     x(4,6,7) // ReferenceError: Can't find variable: arguments
+     ```
+     but with regular function,
+     ```javascript
+     let x = function () {
+        console.log(arguments);
+     }
+     
+     x(4,6,7); // Arguments [4, 6, 7]
+     ```
+     
+     To solve this issue, we can use `spread operator`:
+     ```javascript
+     let x = (...args) => {
+        console.log(args);
+     }
+
+     x(4,6,7); // [4, 6, 7]
+     ```
+  5. Arrow functions provide better syntax to write `promises & callbacks`.
+   
+     ##### ES5
+     ```javascript
+     asyncFunction().then(function() {
+        return asyncFunction1();
+     }).then(function() {
+        return asyncFunction2();
+     }).then(function() {
+        finish;
+     });
+     ```
+     ##### ES6
+     ```javascript
+     asyncFunction()
+      .then(() => asyncFunction1())
+      .then(() => asyncFunction2())
+      .then(() => finish);
+     ```
+  6. You cannot use an arrow function as a `constructor`.
+     ```javascript
+     let Foo = () => {};
+     let foo = new Foo(); // TypeError: Foo is not a constructor
+     ```
+     
 
 ## 16. Undefined vs not defined vs null
 `undefined` keyword or property indicates that a variable has not been assigned/initialized a value. `undefined` variables takes up their own memory in the memory space.
