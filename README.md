@@ -54,71 +54,15 @@
 42. [Function constructors](#42-Function-constructors)
 43. [Module design pattern & IIFE]()
 44. [First class functions/citizens]()
-45. [Pure functions]()
+45. [Pure and Impure functions]()
 46. [Recurssion]()
 47. [Classes]()
 48. [Callback functions]()
 49. [Main thread blocking]()
 50. [Event Listeners]()
-51. [Event loop]()
-52. [Web APIs]()
-53. [Callback Queue]()
-54. [Microtask Queue]()
-55. [Starvation of callbacks]()
-56. [JavaScript Runtime Environment]()
-57. [JS Engine]()
-58. [Just-in-time compilation]()
-59. [Concurrency model]()
-60. [Functional Programing]()
-61. [DRY]()
-62. [Higher order functions]()
-63. [Prototype chain]()
-64. [Dunder proto]()
-65. [Uses of prototype]()
-66. [Call, Apply, Bind]()
-67. [Promises]()
-68. [Async/await]()
-69. [Callback hell]()
-70. [Imports & dynamic imports]()
-71. [Polyfills]()
-72. [Currying]()
-73. [Coercion]()
-74. [Event Bubbling & Event Capturing (trikkling)]()
-75. [Event delegation]()
-76. [Debouncing & Throtling]()
-77. [Objects]()
-78. [Rest & spread operators]()
-79. [Destructuring]()
-80. [Deep copy & shallow copy]()
-81. [Array methods & their Big(O)]()
-82. [for in vs for of loops]()
-83. [map() vs forEach()]()
-84. [map() vs reduce() vs filter()]()
-85. [Sort vs Numeric sort]()
-86. [Map vs Objects vs Sets]()
-87. [WeakMap vs WeakSets]()
-88. [Memoization]()
-89. [Object freeze vs seal vs preventExtension]()
-90. [Numeric Seperator]()
-91. [DOM APIs]()
-92. [Fetch vs Axios]()
-93. [Mutation Observer]()
-94. [Browser storages]()
-95. [Cookies vs Localstorage]()
-96. [SessionStorage & CacheStorage]()
-97. [Iterators & Generators]()
-98. [XSS attack (cross site scripting)]()
-99. [CSRF attack]()
-100. [ClickJacking]()
-101. [CSP (content security policy)]()
-102. [Service workers]()
 
 
 **[⬆ Back to Top](#lets-go-)**
-
-
-
-
 
 ## 1. Data types
 JavaScript provides 2 types of data-types, `Primitive` type and `Non-Primitive` type.
@@ -973,9 +917,215 @@ The module pattern is a design pattern used for improving the maintainability an
 Sometimes called `encapsulation`, it protects the value inside a module from being accessed from other scopes.
 
 ## 44. First class functions or citizens
-The ability to be use functions as values.
+A programming language is said to have `First-class` functions when functions in that language are treated like any other variable. 
 
-## 45. Pure functions
-<--loading-->
+For example, in such a language, a function can be passed as an argument to other functions, can be returned by another function and can be assigned as a value to a variable.
+
+#### Assigning a function to a variable:
+```javascript
+const foo = () => {
+  console.log("foobar");
+};
+foo(); // Invoke it using the variable
+```
+
+#### Passing a function as an argument:
+```javascript
+function greeting(helloMessage, name) {
+  console.log(helloMessage() + name);
+}
+function sayHello() {
+  return "Hello, ";
+}
+// Pass `sayHello` as an argument to `greeting` function
+greeting(sayHello, "JavaScript!");
+// Hello, JavaScript!
+```
+
+#### Returning a function:
+```javascript
+function sayHello() {
+  return () => {
+    console.log("Hello!");
+  };
+}
+```
+
+## 45. Pure and Impure functions
+A pure function is a function that returns the same result if the same arguments(input) are passed to the function.
+
+1. The return value of the function on the function call should only be dependent on the input function arguments.
+
+2. It should not modify any non-local state. It means the function should not manipulate anything other than the data stored in the local variables declared within the function.
+
+```javascript
+function operationAdd(a, b){ // A pure function adding two integers passed in it.
+    return a+b;
+}
+
+function operationDivide(a, b){  // Pure function to divide two integers passed in it.
+    return a/b;
+}
+
+function operationMulti(a, b){    // Pure function to multiple two integers passed in it.
+    return a*b;
+}
+console.log(        // Calling all the pure functions
+  operationAdd(2,5),
+  operationMulti(3,2),
+  operationDivide(20,5)
+);
+```
+
+#### Why Use Pure Functions?
+
+1. Better Readability:
+Pure functions increase the readability of the javascript code because of its simplicity.
+
+2. Testable:
+It's easier to perform unit testing on a pure function than on an impure function. A pure function result only depends upon its input arguments hence the whole function can be treated as an independent entity. So we can just take that function and test it with some standard input values whose output is known.
+
+3. Better Performance:
+Pure functions can be memoized and this makes your application faster.
+
+### Impure function
+An impure function gives inconsistent results or different results for the same input values.
+
+```javascript
+ function impureFunc(myArray, item) {
+     return myArray.push(item);
+ }
+```
+In the above example, we are manipulating the myArray argument and a pure function should not change(manipulate) any part of the code. That's why this is an impure function.
+
+#### Returning value dependent on the non-local state:
+```javascript
+const message = 'Hi there! ';
+ function myMessage(value) {
+     return `${message} ${value}`
+ }
+ console.log(myMessage('hello'));
+```
+In the above code, the result the function is returning is dependent on the variable that is not declared inside the function, that's why this is an impure function.
+
+#### Some side effects:
+1. Making an HTTP request
+2. Mutating data
+3. Printing to a screen or console
+4. DOM Query/Manipulation
+5. Using Math.random()
+6. Getting the current time
 
 ## 46. Recurssion
+Recursion is a process of calling itself. A function that calls itself is called a recursive function.
+
+#### Characteristics:
+1. A recursive function must have a condition to stop calling itself. Otherwise, the function is called `indefinitely`.
+2. Once the condition is met, the function stops calling itself. This is called a `base condition`.
+
+```javascript
+// program to find the factorial of a number
+function factorial(x) {
+    if (x < 0) return 'Invalid input'
+    if (x === 0) {
+        return 1;
+    } else {
+        return x * factorial(x - 1);
+    }
+}
+factorial(3) // 6
+```
+
+## 47. Classes
+Classes are a template for creating objects.
+
+#### Characteristics:
+1. Classes were introduced in `EcmaScript 2015 (ES6)` to provide a cleaner way to follow object-oriented programming patterns.
+2. JavaScript still follows a prototype-based inheritance model. Classes in JavaScript are syntactic sugar over the prototype-based inheritance model which we use to implement OOP concepts.
+3. Thus the introduction of classes in JS made it easier for developers to build software around OOP concepts. It also brought in similarities to different OOP-based programming languages such as C++ and Java.
+4. Before classes, we used constructor functions to do OOP in JavaScript. Have a look at the example below:
+
+```javascript
+function Pen(name, color, price) {
+    this.name = name;
+    this.color = color;
+    this.price = price;
+}
+
+const pen1 = new Pen("Marker", "Blue", "$3");
+
+// Adding function in a constructor
+Pen.prototype.showPrice = function(){
+    console.log(`Price of ${this.name} is ${this.price}`);
+}
+
+pen1.showPrice();
+```
+
+We can re-create the above example much cleaner with the help of the Class keyword:
+```javascript
+class Pen {
+    constructor(name, color, price){
+        this.name = name;
+        this.color = color; 
+        this.price = price;
+    }
+    
+    showPrice(){
+        console.log(`Price of ${this.name} is ${this.price}`);
+    }
+}
+
+const pen1 = new Pen("Marker", "Blue", "$3");
+pen1.showPrice();
+```
+
+## 48. Callback functions
+A callback function is a function passed into another function as an argument.
+
+The benefit of using a callback function is that we can wait for the result of a previous function call and then execute another function call.
+```javascript
+function greeting(name) {.  --> callback function
+  alert(`Hello, ${name}`);
+}
+
+function processUserInput(cb) {
+  const name = prompt("Please enter your name.");
+  cb(name);
+}
+
+processUserInput(greeting);
+```
+The above example is a `synchronous` callback, as it is executed immediately.
+
+However, callbacks are often used to continue code execution after an `asynchronous` operation has completed.
+A good example is the callback functions executed inside a `.then()` block chained onto the end of a promise after that promise fulfills or rejects.
+
+## 49. Main thread blocking
+The browser uses a single thread to run all the JavaScript in your page, as well as to perform layout, reflows, and garbage collection.
+
+This means that long-running JavaScript functions can block the thread, leading to an unresponsive page and a bad user experience.
+
+For example: An image transformation which needs 10sec to be computed, you are blocking the UI responses (ex. JS animations, clicks, inputs, typing, etc.)
+
+So the browser itself could decide to take action and show a popup to the user asking whether to `kill that process` or keep it running.
+
+#### Workarounds to this problem: (So we can run a long script as well as not blocking your UI)
+1. Create a WebWorker:
+It is an API for running JavaScript code in a different browser’s thread. Its limitation is it has no access to the DOM. It can communicate with the main thread only via messages.
+
+It is useful for running your computation outside the main thread and once finished getting the response for it. Though if your code needs frequent access to read and manipulate the DOM, maybe this is not the best option.
+
+2. Slice your long-task in little sub-tasks and run them asynchronously:
+We can use the setTimeout API for this and take advantage of the Event queue logic to have other things (Job queue and Rendering).
+
+## 50. Event Listeners
+An event listener is a function that runs once a specific event occurs. So, an event listener “listens” for an action, then calls a function that performs a related task.
+
+```javascript
+document.querySelector('.btn').addEventListener("click", clickDemo)
+
+function clickDemo(){
+    console.log("Hi there")
+}
+```
