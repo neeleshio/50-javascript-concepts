@@ -65,9 +65,9 @@
 **[⬆ Back to Top](#lets-go-)**
 
 ## 1. Data types
-JavaScript provides 2 types of data-types, `Primitive` type and `Non-Primitive` type.
-#### Primitive type:
-Primitive data structure is the data structure that allows you to store only single data type values
+JavaScript provides 2 types of data-types, `Primitive` type and `Non-Primitive` type.\
+<br>
+**Primitive type**: Data structure that allows you to store only single data type values.
 1. String
 2. Number 
 3. BigInt
@@ -75,8 +75,9 @@ Primitive data structure is the data structure that allows you to store only sin
 5. Null
 6. Undefined
 7. Symbol
-#### Non-Primitive type:
-Non-Primitive data structure is a data structure that allows you to store multiple data type values
+<br/>
+
+**NonPrimitive type**: Data structure that allows you to store multiple data type values.
 1. Array
 2. Object
 
