@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>100 Javascript Concepts</h1>
+  <h1>50 Javascript Concepts</h1>
   
   <p><b>JavaScript</b> is a lightweight, Just-in-time compiled, Synchronous Single threaded, Loosly typed programming language.</p>
   
