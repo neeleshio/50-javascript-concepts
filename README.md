@@ -648,7 +648,13 @@ console.log(multiply(5));
 **[⬆ Back to Top](#lets-go-)**
 
 ## 30. Pass by value vs Pass by reference
-<--- loading --->
+When a function is called, the arguments can be passed in two ways, either Pass by value or Pass by reference (address).
+
+**Primitive data** types such as string, number, null, undefined, and boolean, are passed by value while **non-primitive** data types such as objects, arrays, and functions are passed by reference.
+
+`Pass by value` in JavaScript means that a copy of the actual parameter’s value is made in memory. The original value and the copied value are independent of each other as they both have a different space in memory i.e., on changing the value inside the function, the variable outside the function is not affected.
+
+Unlike pass by value, `pass by reference` in does not create a new space in the memory, instead, we pass the reference/address of the actual parameter. Thus, if we change the value of the variable inside the function, then the original value also gets changed.
 
 
 **[⬆ Back to Top](#lets-go-)**
