@@ -33,33 +33,33 @@
 21. [Lexical this](#21-lexical-this)
 22. [let and const](#22-let-and-const)
 23. [var vs let vs const](#23-var-vs-let-vs-const)
-24. [const with objects]()
-25. [Temporal dead zone]()
-26. [Reference vs Syntax vs Type errors]()
-27. [Declaration vs Initialization]()
-28. [Arguments vs Parameters]()
-29. [Default Parameters]()
-30. [Pass by value vs Pass by reference]()
-31. [Block scope]()
-32. [Shadowing]()
-33. [Clousers]()
-34. [Uses of Clousers]()
-35. [SetTimeout]()
-36. [Data hiding using Clousers]()
-37. [Disadvantages of Clousers]()
-38. [Garbage collectors]()
-39. [Types of functions]()
-40. [Function statement vs Function expression]()
+24. [const with objects](#24-const-with-objects)
+25. [Temporal dead zone](#25-Temporal-dead-zone)
+26. [Reference vs Syntax vs Type errors](#26-Reference-vs-Syntax-vs-Type-errors)
+27. [Declaration vs Initialization](#27-Declaration-vs-Initialization)
+28. [Arguments vs Parameters](#28-Arguments-vs-Parameters)
+29. [Default Parameters](#29-Default-Parameters)
+30. [Pass by value vs Pass by reference](#30-Pass-by-value-vs-Pass-by-reference)
+31. [Block scope](#31-Block-scope)
+32. [Shadowing](#32-Shadowing)
+33. [Clousers](#33-Clousers)
+34. [Uses of Clousers](#34-Uses-of-Clousers)
+35. [SetTimeout](#35-SetTimeout)
+36. [Data hiding using Clousers](#36-Data-hiding-using-Clousers)
+37. [Disadvantages of Clousers](#37-Disadvantages-of-Clousers)
+38. [Garbage collectors](#38-Garbage-collectors)
+39. [Types of functions](#39-Types-of-functions)
+40. [Function statement vs Function expression](#40-Function-statement-vs-Function-expression)
 41. [Arguments object](#41-Arguments-object)
 42. [Function constructors](#42-Function-constructors)
-43. [Module design pattern & IIFE]()
-44. [First class functions/citizens]()
-45. [Pure and Impure functions]()
-46. [Recurssion]()
-47. [Classes]()
-48. [Callback functions]()
-49. [Main thread blocking]()
-50. [Event Listeners]()
+43. [Module design pattern and IIFE](#43-Module-design-pattern-and-IIFE)
+44. [First class functions/citizens](#44-First-class-functions/citizens)
+45. [Pure and Impure functions](#45-Pure-and-Impure-functions)
+46. [Recurssion](#46-Recurssion)
+47. [Classes](#47-Classes)
+48. [Callback functions](#48-Callback-functions)
+49. [Main thread blocking](#49-Main-thread-blocking)
+50. [Event Listeners](#50-Event-Listeners)
 
 
 **[⬆ Back to Top](#lets-go-)**
@@ -954,7 +954,7 @@ Warning: This type of methods are not recommended.
 
 **[⬆ Back to Top](#lets-go-)**
 
-## 43. Module design pattern & IIFE
+## 43. Module design pattern and IIFE
 The module pattern is a design pattern used for improving the maintainability and reusability of the code by creating `public` and `private` access levels.
 
 Sometimes called `encapsulation`, it protects the value inside a module from being accessed from other scopes.
