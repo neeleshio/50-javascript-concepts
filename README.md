@@ -53,7 +53,7 @@
 41. [Arguments object](#41-Arguments-object)
 42. [Function constructors](#42-Function-constructors)
 43. [Module design pattern and IIFE](#43-Module-design-pattern-and-IIFE)
-44. [First class functions/citizens](#44-First-class-functions/citizens)
+44. [First class functions/citizens](#44-First-class-functions or citizens)
 45. [Pure and Impure functions](#45-Pure-and-Impure-functions)
 46. [Recurssion](#46-Recurssion)
 47. [Classes](#47-Classes)
