@@ -50,7 +50,7 @@
 38. [Garbage collectors]()
 39. [Types of functions]()
 40. [Function statement vs Function expression]()
-41. [Named Function expression]()
+41. [Arguments object](#41-Arguments-object)
 42. [Function constructors](#42-Function-constructors)
 43. [Module design pattern & IIFE]()
 44. [First class functions/citizens]()
@@ -896,7 +896,7 @@ const a = function xyz() {
 a() // hi
 xyz() // ReferenceError: xyz is not defined.
 ```
-So, we can't access xyz outside of that function, becoz it is created as a local scope. Try console logging xyz inside the xyz function itseld & it will outside whole xyz function.  
+So, we can't access xyz outside of that function, becoz it is created as a local scope. Try console logging xyz inside the xyz function itself & you will get the output of the whole xyz function.  
 
 **[⬆ Back to Top](#lets-go-)**
 
@@ -917,13 +917,49 @@ const b = function() {
 ```
 So, function statements are hoisted as a variables.
 
+**[⬆ Back to Top](#lets-go-)**
+
+## 41. Arguments object
+The arguments of a function are maintained in an array-like object. Within a function, you can address the arguments passed to it as follows:
+```javascript
+arguments[i];
+```
+```javascript
+function myConcat(separator) {
+  let result = ""; // initialize list
+  // iterate through arguments
+  for (let i = 1; i < arguments.length; i++) {
+    result += arguments[i] + separator;
+  }
+  return result;
+}
+
+myConcat("; ", "elephant", "giraffe", "lion", "cheetah") // "elephant; giraffe; lion; cheetah; "
+```
+
+
 ## 42. Function constructors
-<--loading-->
+The Function() constructor creates a new Function object. Calling the constructor directly can create functions dynamically, but suffers from security and similar (but far less significant) performance issues as eval() becoz we are trying to evaluate string as Javascript.
+
+Function constructor creates functions which execute in the global scope only.
+
+```javascript
+const sum = new Function('a', 'b', 'return a + b');
+
+sum(2, 6) // 8
+```
+Note: Function() can be called with or without new. Both create a new Function instance.
+
+Warning: This type of methods are not recommended.
+
+**[⬆ Back to Top](#lets-go-)**
 
 ## 43. Module design pattern & IIFE
 The module pattern is a design pattern used for improving the maintainability and reusability of the code by creating `public` and `private` access levels.
 
 Sometimes called `encapsulation`, it protects the value inside a module from being accessed from other scopes.
+
+**[⬆ Back to Top](#lets-go-)**
 
 ## 44. First class functions or citizens
 A programming language is said to have `First-class` functions when functions in that language are treated like any other variable. 
@@ -959,6 +995,8 @@ function sayHello() {
   };
 }
 ```
+
+**[⬆ Back to Top](#lets-go-)**
 
 ## 45. Pure and Impure functions
 A pure function is a function that returns the same result if the same arguments(input) are passed to the function.
@@ -1025,6 +1063,8 @@ In the above code, the result the function is returning is dependent on the vari
 5. Using Math.random()
 6. Getting the current time
 
+**[⬆ Back to Top](#lets-go-)**
+
 ## 46. Recurssion
 Recursion is a process of calling itself. A function that calls itself is called a recursive function.
 
@@ -1044,6 +1084,8 @@ function factorial(x) {
 }
 factorial(3) // 6
 ```
+
+**[⬆ Back to Top](#lets-go-)**
 
 ## 47. Classes
 Classes are a template for creating objects.
@@ -1089,6 +1131,8 @@ const pen1 = new Pen("Marker", "Blue", "$3");
 pen1.showPrice();
 ```
 
+**[⬆ Back to Top](#lets-go-)**
+
 ## 48. Callback functions
 A callback function is a function passed into another function as an argument.
 
@@ -1110,6 +1154,8 @@ The above example is a `synchronous` callback, as it is executed immediately.
 However, callbacks are often used to continue code execution after an `asynchronous` operation has completed.
 A good example is the callback functions executed inside a `.then()` block chained onto the end of a promise after that promise fulfills or rejects.
 
+**[⬆ Back to Top](#lets-go-)**
+
 ## 49. Main thread blocking
 The browser uses a single thread to run all the JavaScript in your page, as well as to perform layout, reflows, and garbage collection.
 
@@ -1119,7 +1165,7 @@ For example: An image transformation which needs 10sec to be computed, you are b
 
 So the browser itself could decide to take action and show a popup to the user asking whether to `kill that process` or keep it running.
 
-#### Workarounds to this problem: (So we can run a long script as well as not blocking your UI)
+#### Workarounds to this problem: (So we can run a long script as well as not blocking our UI)
 1. Create a WebWorker:
 It is an API for running JavaScript code in a different browser’s thread. Its limitation is it has no access to the DOM. It can communicate with the main thread only via messages.
 
@@ -1128,8 +1174,12 @@ It is useful for running your computation outside the main thread and once finis
 2. Slice your long-task in little sub-tasks and run them asynchronously:
 We can use the setTimeout API for this and take advantage of the Event queue logic to have other things (Job queue and Rendering).
 
+**[⬆ Back to Top](#lets-go-)**
+
 ## 50. Event Listeners
 An event listener is a function that runs once a specific event occurs. So, an event listener “listens” for an action, then calls a function that performs a related task.
+
+You can listen for events on any element in the DOM. JavaScript has an addEventListener() function that you can call on any element on a web page.
 
 ```javascript
 document.querySelector('.btn').addEventListener("click", clickDemo)
@@ -1138,3 +1188,6 @@ function clickDemo(){
     console.log("Hi there")
 }
 ```
+`Event-driven programming` is the name of a paradigm that relies on the execution of an event to perform its functions.
+
+**[⬆ Back to Top](#lets-go-)**
