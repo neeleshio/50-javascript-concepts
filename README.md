@@ -522,7 +522,17 @@ first();
 **[⬆ Back to Top](#lets-go-)**
 
 ## 21. Lexical 'this'
-<--- loading --->
+Arrow functions do not have their own value of this. The value of this in an arrow function is inherited from the enclosing (lexical) scope.
+
+It is just a fancy way of saying its value is static and determined by the scope "this" is defined in.
+
+```javascript
+const myFunction = () => {
+  console.log(this);
+};
+
+myFunction() // window
+```
 
 
 **[⬆ Back to Top](#lets-go-)**
